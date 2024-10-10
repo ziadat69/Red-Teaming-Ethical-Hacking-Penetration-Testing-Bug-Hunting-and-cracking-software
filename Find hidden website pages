@@ -1,0 +1,13 @@
+ Find hidden website pages
+
+Most companies will have an admin portal page, giving their staff access to basic admin controls for day-to-day operations. For a bank, an employee might need to transfer money to and from client accounts. Often these pages are not made private, allowing attackers to find hidden pages that show, or give access to, admin controls or sensitive data.
+
+Type the following command into the terminal to find potentially hidden pages on FakeBank's website using GoBuster (a command-line security application).
+
+-=>> gobuster -u http://fakebank.com -w wordlist.txt dir
+
+
+In the command above, -u is used to state the website we're scanning, -w takes a list of words to iterate through to find hidden pages.
+
+
+If you were a penetration tester or security consultant, this is an exercise you’d perform for companies to test for vulnerabilities in their web applications; find hidden pages to investigate for vulnerabilities.
