@@ -1,0 +1,24 @@
+When you want to judge the security of a system, you need to think in terms of the security triad: confidentiality, integrity, and availability (CIA).
+
+** Confidentiality ensures that only the intended persons or recipients can access the data.
+** Integrity aims to ensure that the data cannot be altered; moreover, we can detect any alteration if it occurs.
+** Availability aims to ensure that the system or service is available when needed.
+
+
+Let’s consider the CIA security triad in the case of placing an order for online shopping:
+
+** Confidentiality: During online shopping, you expect your credit card number to be disclosed only to the entity that processes the payment. If you doubt that your credit card information will be disclosed to an untrusted party, you will most likely refrain from continuing with the transaction. Moreover, if a data breach results in the disclosure of personally identifiable information, including credit cards, the company will incur huge losses on multiple levels.
+** Integrity: After filling out your order, if an intruder can alter the shipping address you have submitted, the package will be sent to someone else. Without data integrity, you might be very reluctant to place your order with this seller.
+** Availability: To place your online order, you will either browse the store’s website or use its official app. If the service is unavailable, you won’t be able to browse the products or place an order. If you continue to face such technical issues, you might eventually give up and start looking for a different online store.
+
+
+Let’s consider the CIA security triad in the case of placing an order for online shopping:
+
+** Confidentiality: During online shopping, you expect your credit card number to be disclosed only to the entity that processes the payment. If you doubt that your credit card information will be disclosed to an untrusted party, you will most likely refrain from continuing with the transaction. Moreover, if a data breach results in the disclosure of personally identifiable information, including credit cards, the company will incur huge losses on multiple levels.
+** Integrity: After filling out your order, if an intruder can alter the shipping address you have submitted, the package will be sent to someone else. Without data integrity, you might be very reluctant to place your order with this seller.
+** Availability: To place your online order, you will either browse the store’s website or use its official app. If the service is unavailable, you won’t be able to browse the products or place an order. If you continue to face such technical issues, you might eventually give up and start looking for a different online store.
+
+Going one more step beyond the CIA security triad, we can think of:
+
+** Authenticity: Authentic means not fraudulent or counterfeit. Authenticity is about ensuring that the document/file/data is from the claimed source.
+** Nonrepudiation: Repudiate means refusing to recognize the validity of something. Nonrepudiation ensures that the original source cannot deny that they are the source of a particular document/file/data. This characteristic is indispensable for various domains, such as shopping, patient diagnosis, and banking. 
