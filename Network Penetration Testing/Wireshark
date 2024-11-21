@@ -1,0 +1,31 @@
+## **4. Monitoring Network Traffic using Wireshark**
+
+#### **Install Wireshark on the Target Machine**:
+1. On the target machine, install Wireshark:
+   ```bash
+   sudo apt install wireshark
+   ```
+
+2. **Start capturing traffic**:
+   - Open Wireshark and select the network interface to monitor traffic.
+
+   - Use the following filter to display 
+
+    only SYN packets ->  tcp.flags.syn == 1
+
+    ping -> icmp
+
+    http -> http and such post 
+
+    ip ring -> ip.src==192.168.0.0/16 or ip.dst==192.158.0.10
+
+    DNS  or smb or nbss ->   DNS  || smb || nbss
+
+   not equal 192.168.1.1 -> ip.src==example ne 192.168.1.1
+
+   Tcp port equal 25 -> tcp port eq 25
+
+ --->>>>> To search for the word 'password' in any packet, use -> tcp.payload contains "pass"
+
+ -->> To find all HTTP requests using the POST method, use the filter: http.request.method == "POST".
+    
