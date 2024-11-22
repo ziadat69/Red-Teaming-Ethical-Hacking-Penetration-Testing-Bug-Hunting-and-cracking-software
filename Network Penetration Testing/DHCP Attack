@@ -1,0 +1,36 @@
+DHCP Starvation Attack:
+
+A DHCP Starvation attack can result in a Denial of Service (DoS) attack or a Man in the Middle (MITM) attack. 
+To perform this attack, the attacker sends tons of bogus DHCP Discover messages with spoofed source MAC addresses. 
+The DHCP server tries to respond to all these bogus messages, and as a result, the pool of IP addresses used by the DHCP
+server is depleted. Hence, a legitimate user won’t be able to get an IP address via DHCP. This results in a DoS attack. 
+Furthermore, the attacker can set up a rogue DHCP server to assign IP addresses to legitimate users. This rogue server can also provide the gateway router and DNS server to users. 
+Now, all the network traffic can be routed via the attacker’s machine, and this is nothing but the MITM attac
+
+
+
+Implementation using Yersinia:
+
+Yersinia is a tool for performing layer 2 attacks. It takes advantage of weaknesses in existing protocols to launch a variety of attacks. 
+
+Step 1: You can install Yersinia on Ubuntu 20.04 using the following command:
+
+--> sudo apt-get install yersinia
+
+--> sudo yersinia -G
+
+Step 2:
+The source IP address is set to 0.0.0.0 as new users send packets using this IP address before they are assigned an 
+IP address by the DHCP server and the destination IP address is set to 255.255.255.255 as the DHCP discover packet 
+is broadcasted in the entire network
+
+Step 3:  select Wlo1
+ Next, we need to select the appropriate interface. 
+For simulation purposes, lo that is the loopback interface was selected. 
+This setting will send DHCP to discover packets to the loopback address. 
+In short, localhost is the DHCP server in this case.
+
+Step 4: Next, we need to select the type of attack that is “sending Discover packet”. 
+You can observe that the DoS checkbox next to it is checked since it is a type of DoS.
+
+
