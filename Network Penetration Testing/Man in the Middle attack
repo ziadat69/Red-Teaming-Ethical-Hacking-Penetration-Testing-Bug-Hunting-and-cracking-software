@@ -1,0 +1,35 @@
+Man in the Middle attack 
+
+
+
+▪ This attack can be performed by etterap or bettercap
+▪ You can use wireshark with ettercap to analyze the packets of the victims while they are entrening http sites
+ 
+  Lets use ettercap
+  
+- # ettercap –G
+- Choose network card (wlan0 or eth0)
+- Go to Hosts and then scan for hosts
+- Observe all hosts in the same network , go to hosts list - Put router Ip in target1 and the victim in taget2
+- Choose arp spoofing
+- Open wireshark and choose the same network card
+
+
+
+
+
+
+▪ But wait , what if it was https
+
+  Man in the Middle attack in https:
+
+▪ When https , we use sslstrip with ettercap to downgrade https to http to be able to analyze the packets
+▪ But sslstrip can only work on HSTS and old ssl certificate but in TLS certificate there is no way to downgrade the request till now 08.2024
+
+ To downgrade https to http then use sslstrip
+# echo "1" > /proc/sys/net/ipv4/ip_forward
+# iptables -t nat -A PREROUTING -p tcp --destination- port 80 -j REDIRECT --to-port 1000
+# sslstrip
+ But it won't work cause of new version of TLS
+
+
