@@ -1,0 +1,62 @@
+### Simple Guide: Scanning Ports and Using Exploits with `nmap`
+
+1. **Scan for Open Ports**  
+   Check which ports are open on an IP, website, or IP range:  
+  
+   ```bash
+-->   nmap <ip/website/ip-range>
+   ```
+  
+   **Example Output:**  
+   ```
+   22/tcp open ssh
+   ```
+
+2. **Get More Information About a Port**  
+   Find out the service and version running on a specific port (e.g., port 22):  
+  
+   ```bash
+-->   nmap <ip/website/ip-range> -p 22 -sV
+   ```
+  
+   **Example Output:**  
+   - Port 22: Open  
+   - Service: SSH  
+   - Version: OpenSSH 8.2  
+
+    --> OpenSSH 8.2 Exploit such in google
+
+3. **Run an Exploit Script**  
+   If a vulnerability is found, use a Python exploit script to test it: 
+
+  
+   ```bash
+ -->  python3 <exploitfile.py> <ip/website/ip-range>
+   ```
+
+
+  High-Speed Port Scanning with Masscan
+     #-->>> * is faster then Nmap
+  
+  Basic Port Scan
+  Scan all ports (0-65535) on a specific IP address: 
+  
+   --> masscan <ip> -p0-65535
+         
+        Result: A list of open ports.
+
+  Control the Scan Speed
+
+  Adjust the scanning speed by setting the rate (packets per second):
+
+  --> masscan <ip> -p0-65535 --rate=1000
+
+  
+
+
+
+
+
+  
+
+
