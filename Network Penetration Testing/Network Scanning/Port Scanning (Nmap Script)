@@ -1,0 +1,20 @@
+nmap <ip> 
+
+nmap -sV <ip>   =>> to get the version of service
+nmap -p22 <ip>   =>> to scan specific port
+nmap -p-  <ip>   =>> to scan all ports 63535
+nmap -Pn <ip>   =>> to bypass the firewall
+nmap -f  <ip>   =>> Fragment mode tobypass the firewall
+nmap -p22,21,25 <ip>  =>> to scan mutiple ports
+
+
+
+nmap Script 
+ nmap --script vuln <ip>   =>> to use script serach Vulnerability
+
+to find all scripts /usr/share/nmap/scripts
+
+
+---> nmap <ip> -p22 --script==ssh*
+
+
